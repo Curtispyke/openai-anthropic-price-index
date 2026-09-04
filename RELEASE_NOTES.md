@@ -13,4 +13,4 @@ Concept DOI: https://doi.org/10.5281/zenodo.22288587
 
 ## Publication boundary
 
-Publication authorized: **yes**. A local candidate is not a public release.
+Publication authorized: **yes**. External publication status is verified separately from this immutable local-candidate manifest.

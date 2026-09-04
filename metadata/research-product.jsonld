@@ -3,7 +3,7 @@
   "@type": "Dataset",
   "@id": "https://kingy.ai/kapi/price-index/",
   "name": "OpenAI and Anthropic API Price Index — August 2026",
-  "description": "A versioned local migration candidate containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle.",
+  "description": "A versioned research release containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle.",
   "url": "https://kingy.ai/kapi/price-index/",
   "identifier": [
     "kingy:dataset:openai-anthropic-price-index:2026-08",

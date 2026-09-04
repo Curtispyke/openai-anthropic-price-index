@@ -12,11 +12,16 @@ task_categories:
 - "tabular-classification"
 size_categories:
 - "n<1K"
+configs:
+- config_name: default
+  data_files:
+  - split: train
+    path: "data/openai-anthropic-price-index.csv"
 ---
 
 # OpenAI and Anthropic API Price Index — August 2026
 
-A versioned local migration candidate containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle.
+A versioned research release containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle.
 
 ## Dataset structure
 
@@ -36,7 +41,6 @@ Use for transparent analysis, comparison, and reproducible charting within the s
 
 - Not a market census
 - Prices and product terms can change
-- Redistribution and licensing remain pending
 
 ## Creators
 

@@ -1,6 +1,6 @@
 # OpenAI and Anthropic API Price Index — August 2026
 
-A versioned local migration candidate containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle.
+A versioned research release containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle.
 
 Version: **v2026.08.0** · Released: **2026-08-24**
 

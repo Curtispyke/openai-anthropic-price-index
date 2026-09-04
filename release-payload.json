@@ -11,8 +11,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 982,
-      "sha256": "425854976a5338be3fdc12ba07312316097051287f265fb8a3d19062813c0559"
+      "bytes": 973,
+      "sha256": "fed5d5251431e2eac42725292cdb97ce7135d64378bea7e4917945948a3f3a1c"
     },
     {
       "path": "DISCLOSURE.md",
@@ -21,8 +21,8 @@
     },
     {
       "path": "DOWNLOADS.md",
-      "bytes": 1497,
-      "sha256": "5b5b190c976bf30e326b84daff76425a0a8b0b538f3083ea4a6c009d4700b4a3"
+      "bytes": 1423,
+      "sha256": "b0ea7ca9c51ae4360bb67531dd6e226f932d8a0973928f89dea6ee3fe7acf0bc"
     },
     {
       "path": "LICENSE-CODE.md",
@@ -41,13 +41,13 @@
     },
     {
       "path": "README.huggingface.md",
-      "bytes": 1480,
-      "sha256": "96401468b0779818a25d356ba73dfd86cf75a6c0af048cf48f991f6a9e68c5a6"
+      "bytes": 1538,
+      "sha256": "930f7ad2bd57907fbf7d4d161beccc55342246da6db5137a09e134b6c4c4963d"
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 469,
-      "sha256": "3bafdcde9a4ecd848a608a59a0110089a2edbd4b30f8baaa3eeefb47f1836151"
+      "bytes": 523,
+      "sha256": "f50f752e2ae64749565a52803b7f6de4a1bf81992c55ac765047a4a8be0287ad"
     },
     {
       "path": "charts/charts-manifest.csv",
@@ -96,18 +96,18 @@
     },
     {
       "path": "metadata/croissant.json",
-      "bytes": 3224,
-      "sha256": "677597442fcc4f4573395862d1fdc603bdc6bec70cb0a3a68695ec9f5cea2fb8"
+      "bytes": 3215,
+      "sha256": "630a4cab5aabe1684ca9b7a82822c26b7a6451711da0d6b00ba64920e25958fc"
     },
     {
       "path": "metadata/research-product.jsonld",
-      "bytes": 4457,
-      "sha256": "6dd0627dfa53e2af859f5d0055bf1a170e47245207226ef3a8b9d380f25060c2"
+      "bytes": 4448,
+      "sha256": "0333a833b4ade19021ed1a0ae3f8b8c57868a3527b834a685eb22063425b1a3d"
     },
     {
       "path": "metadata/zenodo.json",
-      "bytes": 2612,
-      "sha256": "8dea412996bb5fd390cfbd3ddf8574a95d8a717e34465541e06ada668559083a"
+      "bytes": 2603,
+      "sha256": "6c0fd8a560f473568411294ad50b0ad294d022957e16fd408ca5bccf33b11d02"
     },
     {
       "path": "methodology.md",
@@ -126,8 +126,8 @@
     },
     {
       "path": "research-manifest.yaml",
-      "bytes": 9453,
-      "sha256": "7cc912e4345d80745a075b39c0e2a28280721d43ff66959184560fee4f59ad8b"
+      "bytes": 9391,
+      "sha256": "fc25ea534083d6956425f583c54693766c157e9d4021feab76073b6d0d6ead33"
     }
   ]
 }

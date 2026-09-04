@@ -1,7 +1,7 @@
 {
   "title": "OpenAI and Anthropic API Price Index — August 2026",
   "upload_type": "dataset",
-  "description": "A versioned local migration candidate containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle.",
+  "description": "A versioned research release containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle.",
   "creators": [
     {
       "name": "Pyke, Curtis",

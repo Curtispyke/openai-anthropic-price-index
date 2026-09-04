@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this research product, cite the exact version below."
 type: dataset
 title: "OpenAI and Anthropic API Price Index — August 2026"
-abstract: "A versioned local migration candidate containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle."
+abstract: "A versioned research release containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle."
 authors:
   - family-names: "Pyke"
     given-names: "Curtis"

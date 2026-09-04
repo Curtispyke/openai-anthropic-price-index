@@ -12,4 +12,4 @@ Version: **v2026.08.0**
 | [source-capture-manifest.json](provenance/source-capture-manifest.json) | source-manifest | application/json | 11542 | `412b5e5af677c6f47b0269c4a277c90979f8f3899cfc3e4bdbde8328f2dc16dc` |
 | [sources.csv](provenance/sources.csv) | source-manifest | text/csv | 2772 | `53bc0c0a1b3bb373ba756bb3fde982895714ac1efe273bd431257bd12ad1374c` |
 
-The links above are local package paths in this release candidate. Public URLs are recorded in the canonical manifest but do not become live until separately authorized publication.
+The links above are paths within the versioned package. Public URLs are recorded in the canonical manifest.

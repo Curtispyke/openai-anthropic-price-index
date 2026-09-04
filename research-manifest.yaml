@@ -110,7 +110,7 @@
   "id": "kingy:dataset:openai-anthropic-price-index:2026-08",
   "slug": "openai-anthropic-price-index",
   "title": "OpenAI and Anthropic API Price Index — August 2026",
-  "description": "A versioned local migration candidate containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle.",
+  "description": "A versioned research release containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle.",
   "product_type": "dataset",
   "version": "v2026.08.0",
   "release_date": "2026-08-24",
@@ -140,8 +140,7 @@
     ],
     "limitations": [
       "Not a market census",
-      "Prices and product terms can change",
-      "Redistribution and licensing remain pending"
+      "Prices and product terms can change"
     ],
     "uncertainty": "The migration does not rerun source acquisition; it inherits the source package timestamps, scope, and documented limitations."
   },
