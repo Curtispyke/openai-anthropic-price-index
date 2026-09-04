@@ -6,11 +6,10 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   validate:
-    if: github.event_name != 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,37 +17,3 @@ jobs:
         with:
           node-version: 24
       - run: npm test
-
-  apply-authorized-correction:
-    if: github.event_name == 'workflow_dispatch'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Verify immutable predecessor and scope
-        run: |
-          test "$(git rev-parse v2026.08.0^{commit})" = "daee2e2efb8d3ec384c2f57e2acdf53c7e3f210e"
-          git merge-base --is-ancestor f483e2a HEAD
-          test -z "$(git tag -l v2026.08.1)"
-          git diff --quiet f483e2a -- . ':(exclude).github/workflows/research-product-gate.yml'
-          cp .github/workflows/research-product-gate.yml /tmp/bootstrap-workflow.yml
-      - name: Apply checksum-pinned correction
-        run: |
-          curl -fsSLo /tmp/correction.tar.gz https://kingy.ai/wp-content/uploads/kingy-research-correction-bootstrap/openai-anthropic-price-index-v2026.08.1.tar.gz
-          echo "7c39d47d903fef93d306c6035221512ea23874a4788ec9183d53bd7c6173376f  /tmp/correction.tar.gz" | sha256sum -c -
-          tar -xzf /tmp/correction.tar.gz -C .
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-      - run: npm test
-      - name: Restore sealed release content and push
-        run: |
-          tar -xzf /tmp/correction.tar.gz -C .
-          cp /tmp/bootstrap-workflow.yml .github/workflows/research-product-gate.yml
-          git config user.name "Kingy AI Release Bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add -A
-          git diff --cached --quiet -- .github/workflows/research-product-gate.yml
-          git commit -m "Release v2026.08.1 correction"
-          git push origin HEAD:main
