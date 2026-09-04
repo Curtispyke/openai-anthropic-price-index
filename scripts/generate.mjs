@@ -161,6 +161,11 @@ ${yamlList('tags', [...new Set([...(hf.tags ?? []), 'mlcroissant'])])}
 ${yamlList('task_categories', hf.task_categories ?? [])}
 size_categories:
 - ${JSON.stringify(hf.size_category ?? 'n<1K')}
+configs:
+- config_name: default
+  data_files:
+  - split: train
+    path: ${JSON.stringify(`data/${manifest.slug}.csv`)}
 ---
 
 # ${manifest.title}
@@ -209,7 +214,7 @@ Version: **${manifest.version}**
 |---|---|---|---:|---|
 ${lines}
 
-The links above are local package paths in this release candidate. Public URLs are recorded in the canonical manifest but do not become live until separately authorized publication.
+The links above are local paths in this release package. Public URLs are recorded in the canonical manifest.
 `;
 }
 
@@ -227,9 +232,9 @@ ${manifest.release.change_summary}
 ${manifest.dois?.version ? `Exact version DOI: https://doi.org/${manifest.dois.version}` : 'Exact version DOI: pending.'}  
 ${manifest.dois?.concept ? `Concept DOI: https://doi.org/${manifest.dois.concept}` : 'Concept DOI: pending.'}
 
-## Publication boundary
+## Publication status
 
-Publication authorized: **${manifest.publication_authorized ? 'yes' : 'no'}**. A local candidate is not a public release.
+Publication authorized: **${manifest.publication_authorized ? 'yes' : 'no'}**. Status: **${manifest.status}**.
 `;
 }
 

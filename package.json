@@ -1,6 +1,6 @@
 {
   "name": "openai-anthropic-price-index",
-  "version": "2026.08.0",
+  "version": "2026.08.1",
   "private": false,
   "type": "module",
   "scripts": {

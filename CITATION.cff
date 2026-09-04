@@ -7,9 +7,9 @@ authors:
   - family-names: "Pyke"
     given-names: "Curtis"
     affiliation: "Kingy AI"
-version: "2026.08.0"
-date-released: "2026-08-24"
-url: "https://kingy.ai/kapi/price-index/"
+version: "2026.08.1"
+date-released: "2026-09-03"
+url: "https://kingy.ai/research/openai-anthropic-api-price-index/"
 repository-code: "https://github.com/Curtispyke/openai-anthropic-price-index"
 license: "CC-BY-4.0"
 identifiers:
@@ -17,8 +17,8 @@ identifiers:
     value: "10.5281/zenodo.22288587"
     description: "Concept DOI for all versions"
   - type: doi
-    value: "10.5281/zenodo.22288588"
-    description: "Version DOI for v2026.08.0"
+    value: "10.5281/zenodo.22294483"
+    description: "Version DOI for v2026.08.1"
 keywords:
   - "AI pricing"
   - "OpenAI"

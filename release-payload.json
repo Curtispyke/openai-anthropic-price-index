@@ -1,7 +1,7 @@
 {
   "schema_version": "kingy-release-payload-v1",
   "product_id": "kingy:dataset:openai-anthropic-price-index:2026-08",
-  "version": "v2026.08.0",
+  "version": "v2026.08.1",
   "local_candidate_only": false,
   "files": [
     {
@@ -11,8 +11,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 973,
-      "sha256": "fed5d5251431e2eac42725292cdb97ce7135d64378bea7e4917945948a3f3a1c"
+      "bytes": 998,
+      "sha256": "f48dfd0a887e915b1406122ded10fbdeeb5adf137b13f6a331c662d66a60a51a"
     },
     {
       "path": "DISCLOSURE.md",
@@ -21,8 +21,8 @@
     },
     {
       "path": "DOWNLOADS.md",
-      "bytes": 1423,
-      "sha256": "b0ea7ca9c51ae4360bb67531dd6e226f932d8a0973928f89dea6ee3fe7acf0bc"
+      "bytes": 1424,
+      "sha256": "5f111a491acf7644d10a9e5a2fbf8262808a160e0df508a7d3d84f990eacbdb6"
     },
     {
       "path": "LICENSE-CODE.md",
@@ -46,13 +46,13 @@
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 523,
-      "sha256": "f50f752e2ae64749565a52803b7f6de4a1bf81992c55ac765047a4a8be0287ad"
+      "bytes": 555,
+      "sha256": "45cf08eda6344217cbe81c766d962f1728ef6303ece46c2d194854189ae6cb65"
     },
     {
       "path": "charts/charts-manifest.csv",
       "bytes": 509,
-      "sha256": "153758442436380b0c045af87d11155600fc74edcf55a18e24a7eba32e08bb3a"
+      "sha256": "e179ba367be7eadd68e620f93ec8ff18bf58d64a603d854aab687a16917d582b"
     },
     {
       "path": "charts/records-by-provider.alt.txt",
@@ -86,8 +86,8 @@
     },
     {
       "path": "data/release/openai-anthropic-price-index.json",
-      "bytes": 405379,
-      "sha256": "dbf6b7de07db9338467a657b7e264a1cecd9bc42ab791328cb031260cbdebd07"
+      "bytes": 405378,
+      "sha256": "24a05f8c7054dbb9234fc10588c681aebf4b47512aa29434d2f3be768b8a3845"
     },
     {
       "path": "data/release/openai-anthropic-price-index.schema.json",
@@ -96,18 +96,18 @@
     },
     {
       "path": "metadata/croissant.json",
-      "bytes": 3215,
-      "sha256": "630a4cab5aabe1684ca9b7a82822c26b7a6451711da0d6b00ba64920e25958fc"
+      "bytes": 3290,
+      "sha256": "f9e39a8c144b91493a52c84a81e2179424db78449d2777ef488ac979da3af6e4"
     },
     {
       "path": "metadata/research-product.jsonld",
-      "bytes": 4448,
-      "sha256": "0333a833b4ade19021ed1a0ae3f8b8c57868a3527b834a685eb22063425b1a3d"
+      "bytes": 4673,
+      "sha256": "0ef66fe6f05a84e357f9e3d4a6d0abac3ac13ed2393f0417068cc939ec644184"
     },
     {
       "path": "metadata/zenodo.json",
-      "bytes": 2603,
-      "sha256": "6c0fd8a560f473568411294ad50b0ad294d022957e16fd408ca5bccf33b11d02"
+      "bytes": 2628,
+      "sha256": "60e5763251e2ad54f2e70c21a3ab032848377d340419f94b1679d17023bdb083"
     },
     {
       "path": "methodology.md",
@@ -116,8 +116,8 @@
     },
     {
       "path": "provenance/source-capture-manifest.json",
-      "bytes": 11542,
-      "sha256": "412b5e5af677c6f47b0269c4a277c90979f8f3899cfc3e4bdbde8328f2dc16dc"
+      "bytes": 11541,
+      "sha256": "c0447befe56e75cf252c041093ddc7fe922b4d35000592fe73c1f38d064693ca"
     },
     {
       "path": "provenance/sources.csv",
@@ -126,8 +126,8 @@
     },
     {
       "path": "research-manifest.yaml",
-      "bytes": 9391,
-      "sha256": "fc25ea534083d6956425f583c54693766c157e9d4021feab76073b6d0d6ead33"
+      "bytes": 9708,
+      "sha256": "df5fe02b0bc0abeff50ebf32934af21dbe0c91df1ee60a64737bc02543bb320f"
     }
   ]
 }

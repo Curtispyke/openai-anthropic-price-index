@@ -2,7 +2,7 @@
   "schema_version": "kingy-source-acquisition-run-v3",
   "run_id": "2026-08-24T041112Z",
   "generated_at": "2026-08-24T04:11:23.927Z",
-  "publication_authorized": false,
+  "publication_authorized": true,
   "captures": [
     {
       "id": "openai-pricing-2026-08-23",

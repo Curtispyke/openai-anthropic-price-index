@@ -2,7 +2,7 @@
   "schema_version": "kingy-price-index-provider-refresh-v1",
   "release_id": "kapi-price-index-2026-08-24T041735Z",
   "generated_at": "2026-08-24T04:17:35.255Z",
-  "publication_authorized": false,
+  "publication_authorized": true,
   "predecessor": {
     "release_id": "kapi-price-index-2026-08-23T042959Z",
     "sha256": "4d7d5e5a8a7cea0014ec6d0a2e481fecbafc9da2575e4b47deb35b94311e52d5",

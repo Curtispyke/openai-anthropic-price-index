@@ -138,7 +138,7 @@ function verifyManifest(manifest, failures, holds) {
     if (value && /example\.invalid|\/OWNER\/|REPOSITORY/.test(value)) add(holds, 'destination.placeholder', `${name} still contains a placeholder`);
   }
   if (!manifest.publication_authorized) add(holds, 'publication.authorization', 'External publication is not authorized');
-  if (manifest.status !== 'local-candidate') add(holds, 'status.not_candidate', `Status is ${manifest.status}`);
+  if (!['local-candidate', 'released'].includes(manifest.status)) add(holds, 'status.invalid_release_state', `Status is ${manifest.status}`);
   for (const item of manifest.distributions ?? []) {
     if (!String(item.content_url ?? '').startsWith('https://')) add(failures, 'distribution.url', `Distribution content_url must use HTTPS: ${item.path}`);
     if (!SHA.test(item.sha256 ?? '')) add(failures, 'distribution.sha256', `Invalid SHA-256 for ${item.path}`);

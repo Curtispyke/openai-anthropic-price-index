@@ -1,16 +1,16 @@
-# OpenAI and Anthropic API Price Index — August 2026 v2026.08.0
+# OpenAI and Anthropic API Price Index — August 2026 v2026.08.1
 
-Release date: 2026-08-24  
-Status: local-candidate  
-Classification: remediate
+Release date: 2026-09-03  
+Status: released  
+Classification: publish
 
-Initial reusable citation product migration of the focused August 2026 price-index refresh.
+Correction release: reconciles public-release authorization metadata and moves the focused OpenAI/Anthropic dataset to its own canonical research page without changing the underlying August 2026 price records.
 
 ## Citation
 
-Exact version DOI: https://doi.org/10.5281/zenodo.22288588  
+Exact version DOI: https://doi.org/10.5281/zenodo.22294483  
 Concept DOI: https://doi.org/10.5281/zenodo.22288587
 
-## Publication boundary
+## Publication status
 
-Publication authorized: **yes**. External publication status is verified separately from this immutable local-candidate manifest.
+Publication authorized: **yes**. Status: **released**.

@@ -9,8 +9,8 @@
   "conformsTo": "http://mlcommons.org/croissant/1.1",
   "name": "OpenAI and Anthropic API Price Index — August 2026",
   "description": "A versioned research release containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle.",
-  "url": "https://kingy.ai/kapi/price-index/",
-  "version": "v2026.08.0",
+  "url": "https://kingy.ai/research/openai-anthropic-api-price-index/",
+  "version": "v2026.08.1",
   "license": "CC-BY-4.0",
   "creator": [
     {
@@ -29,7 +29,7 @@
       "@type": "cr:FileObject",
       "@id": "data/release/openai-anthropic-price-index.csv",
       "name": "openai-anthropic-price-index.csv",
-      "contentUrl": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/openai-anthropic-price-index.csv",
+      "contentUrl": "https://kingy.ai/research/openai-anthropic-api-price-index/downloads/v2026.08.1/openai-anthropic-price-index.csv",
       "encodingFormat": "text/csv",
       "sha256": "fdefae09248e90ccf59ef9bda621b0bdc7ba27e0aabd2e91169873e36e568ae9",
       "contentSize": "150458"
@@ -38,10 +38,10 @@
       "@type": "cr:FileObject",
       "@id": "data/release/openai-anthropic-price-index.json",
       "name": "openai-anthropic-price-index.json",
-      "contentUrl": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/openai-anthropic-price-index.json",
+      "contentUrl": "https://kingy.ai/research/openai-anthropic-api-price-index/downloads/v2026.08.1/openai-anthropic-price-index.json",
       "encodingFormat": "application/json",
-      "sha256": "dbf6b7de07db9338467a657b7e264a1cecd9bc42ab791328cb031260cbdebd07",
-      "contentSize": "405379"
+      "sha256": "24a05f8c7054dbb9234fc10588c681aebf4b47512aa29434d2f3be768b8a3845",
+      "contentSize": "405378"
     }
   ],
   "recordSet": [

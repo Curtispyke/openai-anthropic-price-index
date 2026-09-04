@@ -1,10 +1,10 @@
 {
   "schema_version": "kingy-research-product-gate-v1",
   "product_id": "kingy:dataset:openai-anthropic-price-index:2026-08",
-  "version": "v2026.08.0",
+  "version": "v2026.08.1",
   "outcome": "PASS",
   "local_candidate_only": false,
-  "checked_at": "2026-09-04T02:03:31.022Z",
+  "checked_at": "2026-09-04T05:38:13.638Z",
   "failures": [],
   "holds": [],
   "checks": {

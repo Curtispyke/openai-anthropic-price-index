@@ -9,8 +9,8 @@
     }
   ],
   "contributors": [],
-  "version": "2026.08.0",
-  "publication_date": "2026-08-24",
+  "version": "2026.08.1",
+  "publication_date": "2026-09-03",
   "license": "CC-BY-4.0",
   "keywords": [
     "AI pricing",
@@ -21,7 +21,7 @@
   ],
   "related_identifiers": [
     {
-      "identifier": "https://kingy.ai/kapi/price-index/",
+      "identifier": "https://kingy.ai/research/openai-anthropic-api-price-index/",
       "relation": "isIdenticalTo",
       "resource_type": "dataset"
     },
