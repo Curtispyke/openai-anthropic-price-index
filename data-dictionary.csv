@@ -1,0 +1,9 @@
+field,definition,unit
+record_id,Stable price-record identifier.,identifier
+provider_id,Normalized provider identifier.,identifier
+model_id,Normalized model identifier.,identifier
+price_component,"Billed component such as input, output, or cache use.",category
+native_amount,Listed amount in the source currency and native unit.,see currency and native_unit
+normalized_usd_per_1m_tokens,Normalized USD price where token normalization applies.,USD per 1M tokens
+observed_at,UTC timestamp of the retained observation.,ISO 8601 timestamp
+source_ids,Pipe-delimited source identifiers supporting the record.,identifier list

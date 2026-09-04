@@ -1,0 +1,16 @@
+{
+  "name": "openai-anthropic-price-index",
+  "version": "2026.08.0",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate.mjs .",
+    "rebuild:charts": "node scripts/rebuild-charts.mjs .",
+    "validate": "node scripts/validate.mjs .",
+    "test": "node scripts/validate.mjs ."
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

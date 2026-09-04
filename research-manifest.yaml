@@ -1,0 +1,232 @@
+{
+  "schema_version": "kingy-research-manifest-v1",
+  "classification": "remediate",
+  "version_scheme": "calver",
+  "status": "local-candidate",
+  "publication_authorized": true,
+  "repository_url": "https://github.com/Curtispyke/openai-anthropic-price-index",
+  "huggingface_url": "https://huggingface.co/datasets/CurtisPyke/openai-anthropic-price-index",
+  "zenodo_url": "https://zenodo.org/records/22288588",
+  "dois": {
+    "concept": "10.5281/zenodo.22288587",
+    "version": "10.5281/zenodo.22288588"
+  },
+  "coverage": {
+    "temporal": "2026-08-24",
+    "spatial": "Global and source-specific regions"
+  },
+  "creators": [
+    {
+      "name": "Curtis Pyke",
+      "given_name": "Curtis",
+      "family_name": "Pyke",
+      "affiliation": "Kingy AI",
+      "orcid": null,
+      "roles": [
+        "Conceptualization",
+        "Data curation",
+        "Formal analysis",
+        "Methodology",
+        "Validation",
+        "Visualization",
+        "Writing – original draft"
+      ],
+      "identity_status": "confirmed"
+    }
+  ],
+  "contributors": [],
+  "publisher": {
+    "name": "Kingy AI",
+    "url": "https://kingy.ai/",
+    "ror": null
+  },
+  "contact": {
+    "name": "Kingy AI",
+    "url": "https://kingy.ai/"
+  },
+  "licenses": {
+    "data": "CC-BY-4.0",
+    "code": "MIT",
+    "content": "CC-BY-4.0",
+    "rights_status": "approved"
+  },
+  "provenance": {
+    "same_as": [],
+    "is_based_on": [
+      "https://developers.openai.com/api/docs/pricing",
+      "https://developers.openai.com/api/docs/models",
+      "https://developers.openai.com/api/docs/guides/batch",
+      "https://developers.openai.com/api/docs/guides/flex-processing",
+      "https://developers.openai.com/api/docs/guides/fast-mode",
+      "https://developers.openai.com/api/docs/guides/prompt-caching",
+      "https://platform.claude.com/docs/en/about-claude/pricing",
+      "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "https://platform.claude.com/docs/en/build-with-claude/batch-processing"
+    ],
+    "source_inventory": "provenance/sources.csv"
+  },
+  "disclosure": {
+    "conclusion": "Independently funded",
+    "funder": "No external funding or sponsorship; the work was conducted by Kingy AI.",
+    "commissioned_by": "Not externally commissioned.",
+    "prepublication_review": "No covered vendor or other external interested party had prepublication review or veto rights.",
+    "editorial_control": "Curtis Pyke and Kingy AI controlled the questions, methods, analysis, conclusions, wording, and publication decision.",
+    "consideration": "No cash or in-kind consideration was received from the vendors or products covered by these research products.",
+    "conflicts": "Curtis Pyke declared no relevant financial or personal conflicts for these research products.",
+    "interested_party_data": "Public vendor and first-party source material is identified in the source inventory; Kingy AI independently selected, normalized, and analyzed it.",
+    "ai_use": "AI systems assisted with research-product packaging, code generation, and validation. Curtis Pyke reviewed the release decisions and accepts accountability for the published work.",
+    "independent_review": "No independent external review was performed.",
+    "limitations": "Independence does not eliminate source incompleteness, archive gaps, interpretation error, or the documented methodological limitations.",
+    "corrections": "Corrections will be documented in versioned errata or a new immutable release; released files will not be silently replaced.",
+    "review_status": "approved"
+  },
+  "privacy": {
+    "review_status": "approved",
+    "personal_data": "No direct personal data is included in the release payloads.",
+    "consent": "The products analyze public product, pricing, archive, and publication records and do not involve human research participants.",
+    "copyright_status": "Kingy AI approves redistribution of the included original analysis, normalized data, metadata, and charts with source attribution under the stated licenses.",
+    "redistribution_status": "approved"
+  },
+  "platforms": {
+    "website": true,
+    "github": true,
+    "huggingface": true,
+    "zenodo": true
+  },
+  "charts": [
+    {
+      "slug": "records-by-provider",
+      "title": "Price records by provider",
+      "summary": "Counts the migrated normalized price records for each provider.",
+      "alt": "Horizontal bars show anthropic with 85 records and openai with 127 records.",
+      "csv": "charts/records-by-provider.csv",
+      "svg": "charts/records-by-provider.svg",
+      "png": "charts/records-by-provider.png",
+      "source_notes": "Counts are derived directly from provider_id in the distributed CSV.",
+      "license": "CC-BY-4.0"
+    }
+  ],
+  "id": "kingy:dataset:openai-anthropic-price-index:2026-08",
+  "slug": "openai-anthropic-price-index",
+  "title": "OpenAI and Anthropic API Price Index — August 2026",
+  "description": "A versioned local migration candidate containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle.",
+  "product_type": "dataset",
+  "version": "v2026.08.0",
+  "release_date": "2026-08-24",
+  "canonical_url": "https://kingy.ai/kapi/price-index/",
+  "methodology": {
+    "summary": "Preserves the source refresh as supplied and documents row-level variables and official-source capture lineage.",
+    "file": "methodology.md",
+    "population": "The 212 normalized price records in the focused nine-offering OpenAI and Anthropic refresh.",
+    "variables": [
+      "provider_id",
+      "model_id",
+      "price_component",
+      "native_amount",
+      "native_unit",
+      "normalized_usd_per_1m_tokens",
+      "observed_at",
+      "source_ids"
+    ],
+    "units": [
+      "USD",
+      "per 1M tokens",
+      "ISO 8601 UTC timestamps"
+    ],
+    "exclusions": [
+      "Providers other than OpenAI and Anthropic",
+      "Offerings outside the focused source refresh"
+    ],
+    "limitations": [
+      "Not a market census",
+      "Prices and product terms can change",
+      "Redistribution and licensing remain pending"
+    ],
+    "uncertainty": "The migration does not rerun source acquisition; it inherits the source package timestamps, scope, and documented limitations."
+  },
+  "keywords": [
+    "AI pricing",
+    "OpenAI",
+    "Anthropic",
+    "API price index",
+    "machine-readable dataset"
+  ],
+  "distributions": [
+    {
+      "path": "data/release/openai-anthropic-price-index.csv",
+      "encoding_format": "text/csv",
+      "content_url": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/openai-anthropic-price-index.csv",
+      "role": "data",
+      "sha256": "fdefae09248e90ccf59ef9bda621b0bdc7ba27e0aabd2e91169873e36e568ae9",
+      "size_bytes": 150458
+    },
+    {
+      "path": "data/release/openai-anthropic-price-index.json",
+      "encoding_format": "application/json",
+      "content_url": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/openai-anthropic-price-index.json",
+      "role": "data",
+      "sha256": "dbf6b7de07db9338467a657b7e264a1cecd9bc42ab791328cb031260cbdebd07",
+      "size_bytes": 405379
+    },
+    {
+      "path": "data/release/openai-anthropic-price-index.schema.json",
+      "encoding_format": "application/schema+json",
+      "content_url": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/openai-anthropic-price-index.schema.json",
+      "role": "schema",
+      "sha256": "59730c799d2070a88bf2501db17095e3172f7111d35a119eeb9a92264a0d8935",
+      "size_bytes": 19624
+    },
+    {
+      "path": "methodology.md",
+      "encoding_format": "text/markdown",
+      "content_url": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/methodology.md",
+      "role": "methodology",
+      "sha256": "5b9815f60b2ffc6f42b74acd53e8a3ade0cd0e93bd1fa0baa593bb2fab72422e",
+      "size_bytes": 1062
+    },
+    {
+      "path": "data-dictionary.csv",
+      "encoding_format": "text/csv",
+      "content_url": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/data-dictionary.csv",
+      "role": "schema",
+      "sha256": "330ea370e83547e3f75dec25d1c8cf10a225ba93ec28a3555da7c09e58a8d951",
+      "size_bytes": 618
+    },
+    {
+      "path": "provenance/source-capture-manifest.json",
+      "encoding_format": "application/json",
+      "content_url": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/source-capture-manifest.json",
+      "role": "source-manifest",
+      "sha256": "412b5e5af677c6f47b0269c4a277c90979f8f3899cfc3e4bdbde8328f2dc16dc",
+      "size_bytes": 11542
+    },
+    {
+      "path": "provenance/sources.csv",
+      "encoding_format": "text/csv",
+      "content_url": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/sources.csv",
+      "role": "source-manifest",
+      "sha256": "53bc0c0a1b3bb373ba756bb3fde982895714ac1efe273bd431257bd12ad1374c",
+      "size_bytes": 2772
+    }
+  ],
+  "release": {
+    "change_summary": "Initial reusable citation product migration of the focused August 2026 price-index refresh.",
+    "update_cadence": "Event-driven with versioned releases",
+    "previous_version": null
+  },
+  "huggingface": {
+    "language": [
+      "en"
+    ],
+    "tags": [
+      "pricing",
+      "openai",
+      "anthropic"
+    ],
+    "task_categories": [
+      "tabular-classification"
+    ],
+    "size_category": "n<1K"
+  }
+}

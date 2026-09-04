@@ -1,0 +1,1 @@
+Horizontal bars show anthropic with 85 records and openai with 127 records.

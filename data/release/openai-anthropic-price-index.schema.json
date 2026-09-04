@@ -1,0 +1,792 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingy.ai/kapi/schema/ai-api-price-index-release-v1.1.json",
+  "title": "Kingy AI API Price Index release package v1.1",
+  "description": "Normative JSON contract for one immutable AI API Price Index release. Referential and arithmetic integrity checks described in the methodology are additional to JSON Schema validation. Version 1.1 adds cache_write for provider-neutral cache-write pricing.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "metadata",
+    "providers",
+    "models",
+    "sources",
+    "price_records",
+    "change_events"
+  ],
+  "properties": {
+    "metadata": {
+      "$ref": "#/$defs/metadata"
+    },
+    "providers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/provider"
+      }
+    },
+    "models": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/modelOffering"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    },
+    "price_records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/priceRecord"
+      }
+    },
+    "change_events": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/changeEvent"
+      }
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nullableString": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "nullableTimestamp": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/timestamp"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "decimalString": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+    },
+    "nullableDecimalString": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/decimalString"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "release_id",
+        "methodology_version",
+        "scenario_bundle_version",
+        "generated_at",
+        "snapshot_at",
+        "canonical_url",
+        "license",
+        "citation",
+        "publication_authorized",
+        "coverage",
+        "artifacts"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "kingy-ai-api-price-index-v1.1"
+        },
+        "release_id": {
+          "type": "string",
+          "pattern": "^kapi-price-index-[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{6}Z$"
+        },
+        "methodology_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "scenario_bundle_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "generated_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "snapshot_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "canonical_url": {
+          "const": "https://kingy.ai/kapi/price-index/"
+        },
+        "license": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "citation": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "publication_authorized": {
+          "type": "boolean"
+        },
+        "coverage": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "provider_count",
+            "offering_count",
+            "price_record_count",
+            "current_count",
+            "due_count",
+            "stale_count",
+            "conflicting_count",
+            "withheld_count"
+          ],
+          "properties": {
+            "provider_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "offering_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "price_record_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "current_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "due_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "stale_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "conflicting_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "withheld_count": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "artifacts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "media_type",
+              "url",
+              "sha256",
+              "bytes"
+            ],
+            "properties": {
+              "name": {
+                "$ref": "#/$defs/nonEmptyString"
+              },
+              "media_type": {
+                "$ref": "#/$defs/nonEmptyString"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "sha256": {
+                "$ref": "#/$defs/sha256"
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "provider": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider_id",
+        "provider_name",
+        "canonical_url"
+      ],
+      "properties": {
+        "provider_id": {
+          "type": "string",
+          "pattern": "^kng:provider:[a-z0-9][a-z0-9-]*$"
+        },
+        "provider_name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "canonical_url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "modelOffering": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "model_id",
+        "provider_id",
+        "model_name",
+        "offering_id",
+        "api_model_id",
+        "aliases",
+        "access_route",
+        "modalities",
+        "availability_status"
+      ],
+      "properties": {
+        "model_id": {
+          "type": "string",
+          "pattern": "^kng:[a-z0-9][a-z0-9.-]*$"
+        },
+        "provider_id": {
+          "type": "string",
+          "pattern": "^kng:provider:[a-z0-9][a-z0-9-]*$"
+        },
+        "model_name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "offering_id": {
+          "type": "string",
+          "pattern": "^kapi:offering:[a-z0-9][a-z0-9:-]*$"
+        },
+        "api_model_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "aliases": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          }
+        },
+        "access_route": {
+          "enum": [
+            "first_party_api",
+            "cloud_marketplace",
+            "managed_cloud_api",
+            "open_source_hosted",
+            "other"
+          ]
+        },
+        "modalities": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "text",
+              "image",
+              "audio",
+              "video",
+              "embedding",
+              "multimodal",
+              "other"
+            ]
+          }
+        },
+        "availability_status": {
+          "enum": [
+            "available",
+            "limited",
+            "preview",
+            "deprecated",
+            "retired"
+          ]
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "url",
+        "publisher",
+        "title",
+        "source_type",
+        "authority",
+        "language",
+        "geographic_scope",
+        "first_captured_at",
+        "last_captured_at",
+        "http_status",
+        "content_sha256",
+        "capture_ref",
+        "review_state"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "pattern": "^kapi:source:[a-z0-9][a-z0-9:-]*$"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "publisher": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "source_type": {
+          "enum": [
+            "official_pricing",
+            "official_model_documentation",
+            "official_api_documentation",
+            "official_changelog",
+            "official_announcement",
+            "official_help_or_sales",
+            "archive_capture",
+            "third_party_evidence"
+          ]
+        },
+        "authority": {
+          "enum": [
+            "vendor_documentation",
+            "vendor_announcement",
+            "public_archive",
+            "independent_third_party"
+          ]
+        },
+        "language": {
+          "type": "string",
+          "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+        },
+        "geographic_scope": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "first_captured_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "last_captured_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "announced_at": {
+          "$ref": "#/$defs/nullableTimestamp"
+        },
+        "effective_at": {
+          "$ref": "#/$defs/nullableTimestamp"
+        },
+        "http_status": {
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 599
+        },
+        "content_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "capture_ref": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "review_state": {
+          "const": "approved_public"
+        },
+        "notes": {
+          "$ref": "#/$defs/nullableString"
+        }
+      }
+    },
+    "priceRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_id",
+        "claim_id",
+        "revision",
+        "provider_id",
+        "model_id",
+        "offering_id",
+        "access_route",
+        "region",
+        "service_tier",
+        "billing_mode",
+        "modality",
+        "price_component",
+        "context_min_tokens",
+        "context_max_tokens",
+        "context_rule",
+        "native_amount",
+        "currency",
+        "native_unit",
+        "normalized_usd_per_1m_tokens",
+        "normalization_formula",
+        "fx_rate_id",
+        "observed_at",
+        "announced_at",
+        "effective_from",
+        "effective_to",
+        "is_current",
+        "source_ids",
+        "evidence_level",
+        "verification_method",
+        "review_state",
+        "freshness",
+        "supersedes_record_id",
+        "notes"
+      ],
+      "properties": {
+        "record_id": {
+          "type": "string",
+          "pattern": "^kapi:price-record:[a-z0-9][a-z0-9:-]*$"
+        },
+        "claim_id": {
+          "type": "string",
+          "pattern": "^kapi:[a-z0-9][a-z0-9:-]*:claim:[a-z0-9][a-z0-9._-]*$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "provider_id": {
+          "type": "string",
+          "pattern": "^kng:provider:[a-z0-9][a-z0-9-]*$"
+        },
+        "model_id": {
+          "type": "string",
+          "pattern": "^kng:[a-z0-9][a-z0-9.-]*$"
+        },
+        "offering_id": {
+          "type": "string",
+          "pattern": "^kapi:offering:[a-z0-9][a-z0-9:-]*$"
+        },
+        "access_route": {
+          "enum": [
+            "first_party_api",
+            "cloud_marketplace",
+            "managed_cloud_api",
+            "open_source_hosted",
+            "other"
+          ]
+        },
+        "region": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "service_tier": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "billing_mode": {
+          "enum": [
+            "on_demand",
+            "batch",
+            "priority",
+            "flex",
+            "reserved",
+            "fine_tuning",
+            "other"
+          ]
+        },
+        "modality": {
+          "enum": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "embedding",
+            "multimodal",
+            "other"
+          ]
+        },
+        "price_component": {
+          "enum": [
+            "input",
+            "output",
+            "cached_input_read",
+            "cache_write",
+            "cache_write_5m",
+            "cache_write_1h",
+            "image_input",
+            "image_output",
+            "audio_input",
+            "audio_output",
+            "video_input",
+            "video_output",
+            "embedding_input",
+            "training",
+            "storage",
+            "request",
+            "tool_call",
+            "search_call",
+            "other"
+          ]
+        },
+        "context_min_tokens": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "context_max_tokens": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "context_rule": {
+          "enum": [
+            "not_applicable",
+            "whole_request",
+            "excess_tokens_only",
+            "provider_defined",
+            "unknown"
+          ]
+        },
+        "native_amount": {
+          "$ref": "#/$defs/decimalString"
+        },
+        "currency": {
+          "$ref": "#/$defs/currency"
+        },
+        "native_unit": {
+          "enum": [
+            "per_token",
+            "per_1k_tokens",
+            "per_1m_tokens",
+            "per_image",
+            "per_second",
+            "per_minute",
+            "per_hour",
+            "per_gb_month",
+            "per_request",
+            "per_call",
+            "other"
+          ]
+        },
+        "normalized_usd_per_1m_tokens": {
+          "$ref": "#/$defs/nullableDecimalString"
+        },
+        "normalization_formula": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "fx_rate_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "observed_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "announced_at": {
+          "$ref": "#/$defs/nullableTimestamp"
+        },
+        "effective_from": {
+          "$ref": "#/$defs/nullableTimestamp"
+        },
+        "effective_to": {
+          "$ref": "#/$defs/nullableTimestamp"
+        },
+        "is_current": {
+          "type": "boolean"
+        },
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^kapi:source:[a-z0-9][a-z0-9:-]*$"
+          }
+        },
+        "evidence_level": {
+          "enum": [
+            "official_source",
+            "company_claim",
+            "kingy_tested",
+            "third_party_evidence",
+            "not_tested"
+          ]
+        },
+        "verification_method": {
+          "enum": [
+            "document_review",
+            "api_response_review",
+            "invoice_or_receipt",
+            "automated_extraction_reviewed",
+            "other"
+          ]
+        },
+        "review_state": {
+          "const": "approved_public"
+        },
+        "freshness": {
+          "const": "current"
+        },
+        "supersedes_record_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "notes": {
+          "$ref": "#/$defs/nullableString"
+        }
+      }
+    },
+    "changeEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "event_id",
+        "event_type",
+        "release_id",
+        "provider_id",
+        "model_id",
+        "offering_id",
+        "price_record_id",
+        "price_component",
+        "scope_hash",
+        "old_native_amount",
+        "new_native_amount",
+        "currency",
+        "native_unit",
+        "last_observed_old_at",
+        "first_observed_new_at",
+        "effective_at",
+        "effective_date_confidence",
+        "source_ids",
+        "observed_at",
+        "changed_fields",
+        "review_state",
+        "supersedes_event_id",
+        "correction_reason"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "kapi-change-event-v2"
+        },
+        "event_id": {
+          "type": "string",
+          "pattern": "^kapi:[a-z0-9][a-z0-9:-]*$"
+        },
+        "event_type": {
+          "enum": [
+            "VERIFIED_PRICE_CHANGED",
+            "PRICE_RECORD_CORRECTED",
+            "OFFERING_RETIRED"
+          ]
+        },
+        "release_id": {
+          "type": "string",
+          "pattern": "^kapi-price-index-[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{6}Z$"
+        },
+        "provider_id": {
+          "type": "string",
+          "pattern": "^kng:provider:[a-z0-9][a-z0-9-]*$"
+        },
+        "model_id": {
+          "type": "string",
+          "pattern": "^kng:[a-z0-9][a-z0-9.-]*$"
+        },
+        "offering_id": {
+          "type": "string",
+          "pattern": "^kapi:offering:[a-z0-9][a-z0-9:-]*$"
+        },
+        "price_record_id": {
+          "type": "string",
+          "pattern": "^kapi:price-record:[a-z0-9][a-z0-9:-]*$"
+        },
+        "price_component": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "scope_hash": {
+          "$ref": "#/$defs/sha256"
+        },
+        "old_native_amount": {
+          "$ref": "#/$defs/nullableDecimalString"
+        },
+        "new_native_amount": {
+          "$ref": "#/$defs/nullableDecimalString"
+        },
+        "currency": {
+          "$ref": "#/$defs/currency"
+        },
+        "native_unit": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "percent_change": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "last_observed_old_at": {
+          "$ref": "#/$defs/nullableTimestamp"
+        },
+        "first_observed_new_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "effective_at": {
+          "$ref": "#/$defs/nullableTimestamp"
+        },
+        "effective_date_confidence": {
+          "enum": [
+            "official_exact",
+            "official_date_only",
+            "observed_interval",
+            "correction"
+          ]
+        },
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^kapi:source:[a-z0-9][a-z0-9:-]*$"
+          }
+        },
+        "observed_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "changed_fields": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          }
+        },
+        "review_state": {
+          "const": "approved_public"
+        },
+        "supersedes_event_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "correction_reason": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "notes": {
+          "$ref": "#/$defs/nullableString"
+        }
+      }
+    }
+  }
+}

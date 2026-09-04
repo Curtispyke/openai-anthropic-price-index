@@ -1,0 +1,2 @@
+product_slug,product_version,coverage,chart_slug,title,summary,alt,csv,svg,png,source_notes,license
+openai-anthropic-price-index,v2026.08.0,2026-08-24,records-by-provider,Price records by provider,Counts the migrated normalized price records for each provider.,Horizontal bars show anthropic with 85 records and openai with 127 records.,charts/records-by-provider.csv,charts/records-by-provider.svg,charts/records-by-provider.png,Counts are derived directly from provider_id in the distributed CSV.,CC-BY-4.0

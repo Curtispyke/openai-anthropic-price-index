@@ -1,0 +1,96 @@
+{
+  "@context": {
+    "@language": "en",
+    "sc": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.1",
+  "name": "OpenAI and Anthropic API Price Index — August 2026",
+  "description": "A versioned local migration candidate containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle.",
+  "url": "https://kingy.ai/kapi/price-index/",
+  "version": "v2026.08.0",
+  "license": "CC-BY-4.0",
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Curtis Pyke",
+      "givenName": "Curtis",
+      "familyName": "Pyke",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Kingy AI"
+      }
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "data/release/openai-anthropic-price-index.csv",
+      "name": "openai-anthropic-price-index.csv",
+      "contentUrl": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/openai-anthropic-price-index.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "fdefae09248e90ccf59ef9bda621b0bdc7ba27e0aabd2e91169873e36e568ae9",
+      "contentSize": "150458"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data/release/openai-anthropic-price-index.json",
+      "name": "openai-anthropic-price-index.json",
+      "contentUrl": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/openai-anthropic-price-index.json",
+      "encodingFormat": "application/json",
+      "sha256": "dbf6b7de07db9338467a657b7e264a1cecd9bc42ab791328cb031260cbdebd07",
+      "contentSize": "405379"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "name": "openai-anthropic-price-index records",
+      "description": "The 212 normalized price records in the focused nine-offering OpenAI and Anthropic refresh.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "provider_id",
+          "description": "Variable documented in methodology.md."
+        },
+        {
+          "@type": "cr:Field",
+          "name": "model_id",
+          "description": "Variable documented in methodology.md."
+        },
+        {
+          "@type": "cr:Field",
+          "name": "price_component",
+          "description": "Variable documented in methodology.md."
+        },
+        {
+          "@type": "cr:Field",
+          "name": "native_amount",
+          "description": "Variable documented in methodology.md."
+        },
+        {
+          "@type": "cr:Field",
+          "name": "native_unit",
+          "description": "Variable documented in methodology.md."
+        },
+        {
+          "@type": "cr:Field",
+          "name": "normalized_usd_per_1m_tokens",
+          "description": "Variable documented in methodology.md."
+        },
+        {
+          "@type": "cr:Field",
+          "name": "observed_at",
+          "description": "Variable documented in methodology.md."
+        },
+        {
+          "@type": "cr:Field",
+          "name": "source_ids",
+          "description": "Variable documented in methodology.md."
+        }
+      ]
+    }
+  ]
+}

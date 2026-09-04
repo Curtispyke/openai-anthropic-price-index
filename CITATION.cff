@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this research product, cite the exact version below."
+type: dataset
+title: "OpenAI and Anthropic API Price Index — August 2026"
+abstract: "A versioned local migration candidate containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle."
+authors:
+  - family-names: "Pyke"
+    given-names: "Curtis"
+    affiliation: "Kingy AI"
+version: "2026.08.0"
+date-released: "2026-08-24"
+url: "https://kingy.ai/kapi/price-index/"
+repository-code: "https://github.com/Curtispyke/openai-anthropic-price-index"
+license: "CC-BY-4.0"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22288587"
+    description: "Concept DOI for all versions"
+  - type: doi
+    value: "10.5281/zenodo.22288588"
+    description: "Version DOI for v2026.08.0"
+keywords:
+  - "AI pricing"
+  - "OpenAI"
+  - "Anthropic"
+  - "API price index"
+  - "machine-readable dataset"

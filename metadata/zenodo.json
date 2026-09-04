@@ -1,0 +1,84 @@
+{
+  "title": "OpenAI and Anthropic API Price Index — August 2026",
+  "upload_type": "dataset",
+  "description": "A versioned local migration candidate containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle.",
+  "creators": [
+    {
+      "name": "Pyke, Curtis",
+      "affiliation": "Kingy AI"
+    }
+  ],
+  "contributors": [],
+  "version": "2026.08.0",
+  "publication_date": "2026-08-24",
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "AI pricing",
+    "OpenAI",
+    "Anthropic",
+    "API price index",
+    "machine-readable dataset"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://kingy.ai/kapi/price-index/",
+      "relation": "isIdenticalTo",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://github.com/Curtispyke/openai-anthropic-price-index",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://developers.openai.com/api/docs/pricing",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://developers.openai.com/api/docs/models",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://developers.openai.com/api/docs/guides/batch",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://developers.openai.com/api/docs/guides/flex-processing",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://developers.openai.com/api/docs/guides/fast-mode",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://developers.openai.com/api/docs/guides/prompt-caching",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "@id": "https://kingy.ai/kapi/price-index/",
+  "name": "OpenAI and Anthropic API Price Index — August 2026",
+  "description": "A versioned local migration candidate containing normalized OpenAI and Anthropic API price records, source identifiers, methodology, machine-readable metadata, and a reusable provider-level chart bundle.",
+  "url": "https://kingy.ai/kapi/price-index/",
+  "identifier": [
+    "kingy:dataset:openai-anthropic-price-index:2026-08",
+    "https://doi.org/10.5281/zenodo.22288587",
+    "https://doi.org/10.5281/zenodo.22288588"
+  ],
+  "version": "v2026.08.0",
+  "datePublished": "2026-08-24",
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Curtis Pyke",
+      "givenName": "Curtis",
+      "familyName": "Pyke",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Kingy AI"
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kingy AI",
+    "url": "https://kingy.ai/"
+  },
+  "keywords": [
+    "AI pricing",
+    "OpenAI",
+    "Anthropic",
+    "API price index",
+    "machine-readable dataset"
+  ],
+  "license": "CC-BY-4.0",
+  "isAccessibleForFree": true,
+  "temporalCoverage": "2026-08-24",
+  "spatialCoverage": "Global and source-specific regions",
+  "isBasedOn": [
+    "https://developers.openai.com/api/docs/pricing",
+    "https://developers.openai.com/api/docs/models",
+    "https://developers.openai.com/api/docs/guides/batch",
+    "https://developers.openai.com/api/docs/guides/flex-processing",
+    "https://developers.openai.com/api/docs/guides/fast-mode",
+    "https://developers.openai.com/api/docs/guides/prompt-caching",
+    "https://platform.claude.com/docs/en/about-claude/pricing",
+    "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+    "https://platform.claude.com/docs/en/build-with-claude/batch-processing"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "openai-anthropic-price-index.csv",
+      "contentUrl": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/openai-anthropic-price-index.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": "150458 bytes",
+      "sha256": "fdefae09248e90ccf59ef9bda621b0bdc7ba27e0aabd2e91169873e36e568ae9"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "openai-anthropic-price-index.json",
+      "contentUrl": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/openai-anthropic-price-index.json",
+      "encodingFormat": "application/json",
+      "contentSize": "405379 bytes",
+      "sha256": "dbf6b7de07db9338467a657b7e264a1cecd9bc42ab791328cb031260cbdebd07"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "openai-anthropic-price-index.schema.json",
+      "contentUrl": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/openai-anthropic-price-index.schema.json",
+      "encodingFormat": "application/schema+json",
+      "contentSize": "19624 bytes",
+      "sha256": "59730c799d2070a88bf2501db17095e3172f7111d35a119eeb9a92264a0d8935"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "methodology.md",
+      "contentUrl": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/methodology.md",
+      "encodingFormat": "text/markdown",
+      "contentSize": "1062 bytes",
+      "sha256": "5b9815f60b2ffc6f42b74acd53e8a3ade0cd0e93bd1fa0baa593bb2fab72422e"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "data-dictionary.csv",
+      "contentUrl": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/data-dictionary.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": "618 bytes",
+      "sha256": "330ea370e83547e3f75dec25d1c8cf10a225ba93ec28a3555da7c09e58a8d951"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "source-capture-manifest.json",
+      "contentUrl": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/source-capture-manifest.json",
+      "encodingFormat": "application/json",
+      "contentSize": "11542 bytes",
+      "sha256": "412b5e5af677c6f47b0269c4a277c90979f8f3899cfc3e4bdbde8328f2dc16dc"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "sources.csv",
+      "contentUrl": "https://kingy.ai/kapi/price-index/downloads/v2026.08.0/sources.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": "2772 bytes",
+      "sha256": "53bc0c0a1b3bb373ba756bb3fde982895714ac1efe273bd431257bd12ad1374c"
+    }
+  ]
+}

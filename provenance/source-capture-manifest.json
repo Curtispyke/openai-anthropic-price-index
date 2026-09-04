@@ -1,0 +1,239 @@
+{
+  "schema_version": "kingy-source-acquisition-run-v3",
+  "run_id": "2026-08-24T041112Z",
+  "generated_at": "2026-08-24T04:11:23.927Z",
+  "publication_authorized": false,
+  "captures": [
+    {
+      "id": "openai-pricing-2026-08-23",
+      "provider": "OpenAI",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "required_terms": [
+        "gpt-5.6-sol",
+        "gpt-5.6-terra",
+        "gpt-5.6-luna",
+        "Fast mode"
+      ],
+      "requested_url": "https://developers.openai.com/api/docs/pricing",
+      "final_url": "https://developers.openai.com/api/docs/pricing",
+      "captured_at": "2026-08-24T04:11:12.000Z",
+      "observed_http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "raw_sha256": "abec04012cc426cb2f75ec4b8db305b8b09ad2965f7be0c446b316bbb698b8b6",
+      "normalized_sha256": "72fc920f329fae480ade65a1103435e512b7fad4a222b0fc606459fd9969dfbe",
+      "headers_sha256": "5f9ee72b47cd142485855421539b5b0ee902eccb7911031f013c1651d2449af7",
+      "raw_path": "evidence/openai-pricing-2026-08-23/source.body",
+      "normalized_path": "evidence/openai-pricing-2026-08-23/normalized.txt",
+      "headers_path": "evidence/openai-pricing-2026-08-23/headers.txt",
+      "required_terms_present": true,
+      "missing_required_terms": []
+    },
+    {
+      "id": "openai-models-2026-08-23",
+      "provider": "OpenAI",
+      "url": "https://developers.openai.com/api/docs/models",
+      "required_terms": [
+        "GPT-5.6 Sol",
+        "GPT-5.6 Terra",
+        "GPT-5.6 Luna"
+      ],
+      "requested_url": "https://developers.openai.com/api/docs/models",
+      "final_url": "https://developers.openai.com/api/docs/models",
+      "captured_at": "2026-08-24T04:11:13.000Z",
+      "observed_http_status": 200,
+      "content_type": "text/html",
+      "raw_sha256": "6efa7a1dbcbccba6e087d880ccd47ac17af2fd1dab1f33da1a0b4cc23bec9a2f",
+      "normalized_sha256": "e1be16747d3ae88e0fe051c5fc3ecb9a99ae7269323ce592a9df669a584b531c",
+      "headers_sha256": "a0c9b19d0a1ea7e1e9351acaf5ee247fb108f461b7278193e6cfa79fe008ab81",
+      "raw_path": "evidence/openai-models-2026-08-23/source.body",
+      "normalized_path": "evidence/openai-models-2026-08-23/normalized.txt",
+      "headers_path": "evidence/openai-models-2026-08-23/headers.txt",
+      "required_terms_present": true,
+      "missing_required_terms": []
+    },
+    {
+      "id": "openai-batch-2026-08-23",
+      "provider": "OpenAI",
+      "url": "https://developers.openai.com/api/docs/guides/batch",
+      "required_terms": [
+        "50%",
+        "24 hours"
+      ],
+      "requested_url": "https://developers.openai.com/api/docs/guides/batch",
+      "final_url": "https://developers.openai.com/api/docs/guides/batch",
+      "captured_at": "2026-08-24T04:11:14.000Z",
+      "observed_http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "raw_sha256": "07e237f99672b136c391f084d25aa4da23a6647be747d00db70764eb69b372a0",
+      "normalized_sha256": "0b1015e3fa912e888dea004eaf9d4e4b3f157854bcf4f5a371be82c1ac6d9696",
+      "headers_sha256": "f313cdba6fbaf1fa533a38e79f261d2a12371936605c84e103a193c8644f936f",
+      "raw_path": "evidence/openai-batch-2026-08-23/source.body",
+      "normalized_path": "evidence/openai-batch-2026-08-23/normalized.txt",
+      "headers_path": "evidence/openai-batch-2026-08-23/headers.txt",
+      "required_terms_present": true,
+      "missing_required_terms": []
+    },
+    {
+      "id": "openai-flex-2026-08-23",
+      "provider": "OpenAI",
+      "url": "https://developers.openai.com/api/docs/guides/flex-processing",
+      "required_terms": [
+        "Flex processing",
+        "lower costs"
+      ],
+      "requested_url": "https://developers.openai.com/api/docs/guides/flex-processing",
+      "final_url": "https://developers.openai.com/api/docs/guides/flex-processing",
+      "captured_at": "2026-08-24T04:11:15.000Z",
+      "observed_http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "raw_sha256": "a4625caa136f17c61638d452cbd8ffa6157bab8c1da38f4d63f27bf13bdc9a73",
+      "normalized_sha256": "fd8736884bfbae1ff6d698603a49be7483e303b6f46bb7ca67697092ae46d192",
+      "headers_sha256": "60ea6ce2a6fad5009d6f8fc2773acba750be8f9b0a23db8bb972184f52e52387",
+      "raw_path": "evidence/openai-flex-2026-08-23/source.body",
+      "normalized_path": "evidence/openai-flex-2026-08-23/normalized.txt",
+      "headers_path": "evidence/openai-flex-2026-08-23/headers.txt",
+      "required_terms_present": true,
+      "missing_required_terms": []
+    },
+    {
+      "id": "openai-fast-2026-08-23",
+      "provider": "OpenAI",
+      "url": "https://developers.openai.com/api/docs/guides/fast-mode",
+      "required_terms": [
+        "Fast mode",
+        "Priority processing"
+      ],
+      "requested_url": "https://developers.openai.com/api/docs/guides/fast-mode",
+      "final_url": "https://developers.openai.com/api/docs/guides/fast-mode",
+      "captured_at": "2026-08-24T04:11:16.000Z",
+      "observed_http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "raw_sha256": "d026c73a51089a6ee8e6f45b990a5618224f4a778b6d82176cf5a4786d49b50e",
+      "normalized_sha256": "d7feb633c966648c64f61b87a30b5c7a2a5e54099f51c39e95dc096f574e330f",
+      "headers_sha256": "31cb38ec499e835640c608abe445c499cb044bcba2929ae197c93de0c90ce250",
+      "raw_path": "evidence/openai-fast-2026-08-23/source.body",
+      "normalized_path": "evidence/openai-fast-2026-08-23/normalized.txt",
+      "headers_path": "evidence/openai-fast-2026-08-23/headers.txt",
+      "required_terms_present": true,
+      "missing_required_terms": []
+    },
+    {
+      "id": "openai-caching-2026-08-23",
+      "provider": "OpenAI",
+      "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+      "required_terms": [
+        "Prompt caching",
+        "cached"
+      ],
+      "requested_url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+      "final_url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+      "captured_at": "2026-08-24T04:11:17.000Z",
+      "observed_http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "raw_sha256": "a0c1641daaf5d5be9eb7fe95798391a7b75f2c6342d844518cd2bbe56d2a4e83",
+      "normalized_sha256": "108beaf7de59159059c5811e34573417311fc54653317aefb192bf1c6ea7b76e",
+      "headers_sha256": "85533c9094bc23b3d4813e418ba39efce179af428509d3927fc645de3143bf34",
+      "raw_path": "evidence/openai-caching-2026-08-23/source.body",
+      "normalized_path": "evidence/openai-caching-2026-08-23/normalized.txt",
+      "headers_path": "evidence/openai-caching-2026-08-23/headers.txt",
+      "required_terms_present": true,
+      "missing_required_terms": []
+    },
+    {
+      "id": "anthropic-pricing-2026-08-23",
+      "provider": "Anthropic",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "required_terms": [
+        "Claude Fable 5",
+        "Claude Opus 5",
+        "Claude Sonnet 5",
+        "Batch processing"
+      ],
+      "requested_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "final_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "captured_at": "2026-08-24T04:11:18.000Z",
+      "observed_http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "raw_sha256": "80682c8d6d33d19e0f7f891385d9b5977dc4f6f025c6618c4e1d6ef2c3e5d04e",
+      "normalized_sha256": "df1326ab7ddb6628537e97c1f675b97c5b173f5de10b4da87ca0318dfc058837",
+      "headers_sha256": "908c1d3dad5d38894ba7bc7c7ce1f8147b1399c9a3ad713ba6cc8a56f13cc8cf",
+      "raw_path": "evidence/anthropic-pricing-2026-08-23/source.body",
+      "normalized_path": "evidence/anthropic-pricing-2026-08-23/normalized.txt",
+      "headers_path": "evidence/anthropic-pricing-2026-08-23/headers.txt",
+      "required_terms_present": true,
+      "missing_required_terms": []
+    },
+    {
+      "id": "anthropic-models-2026-08-23",
+      "provider": "Anthropic",
+      "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "required_terms": [
+        "claude-fable-5",
+        "claude-opus-5",
+        "claude-sonnet-5"
+      ],
+      "requested_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "final_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "captured_at": "2026-08-24T04:11:19.000Z",
+      "observed_http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "raw_sha256": "d2949cf71fa181219472ca31af627f08291aa730336d4c8a3d46563a0c4b5d6b",
+      "normalized_sha256": "d4ad4ae8a753feed6b892978d09528675a2c04d36286fa9a05d3037a98e3422f",
+      "headers_sha256": "c0b2b6ec2c6e106148bcfdefc131d0d082e113bfcbc6cc0b2f279f1cea631eb6",
+      "raw_path": "evidence/anthropic-models-2026-08-23/source.body",
+      "normalized_path": "evidence/anthropic-models-2026-08-23/normalized.txt",
+      "headers_path": "evidence/anthropic-models-2026-08-23/headers.txt",
+      "required_terms_present": true,
+      "missing_required_terms": []
+    },
+    {
+      "id": "anthropic-caching-2026-08-23",
+      "provider": "Anthropic",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "required_terms": [
+        "5-minute",
+        "1-hour",
+        "cache_read"
+      ],
+      "requested_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "final_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "captured_at": "2026-08-24T04:11:20.000Z",
+      "observed_http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "raw_sha256": "ac27ed4d412018ec84290e8d389c6ae38d5355208a37f7ae5c2ce547217fffb0",
+      "normalized_sha256": "b0083eecdd91a02c6731aa3f49137bae4db82ca33ce19f662a0ec7c66e6beca5",
+      "headers_sha256": "37794cd85d2603b7a7fb69a03ec3351b76bcecf2c64856176af795b2162766e5",
+      "raw_path": "evidence/anthropic-caching-2026-08-23/source.body",
+      "normalized_path": "evidence/anthropic-caching-2026-08-23/normalized.txt",
+      "headers_path": "evidence/anthropic-caching-2026-08-23/headers.txt",
+      "required_terms_present": true,
+      "missing_required_terms": []
+    },
+    {
+      "id": "anthropic-batch-2026-08-23",
+      "provider": "Anthropic",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+      "required_terms": [
+        "Message Batches",
+        "50%"
+      ],
+      "requested_url": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+      "final_url": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+      "captured_at": "2026-08-24T04:11:22.000Z",
+      "observed_http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "raw_sha256": "142679774af1409e4422be4de9747ceef3ec251e5c547013e9ae95252fd378a3",
+      "normalized_sha256": "8d587730022fa919bb223d148d6a867f25e7926e5b2a2091c4376074dfcc749f",
+      "headers_sha256": "9f72cbd085038e03f9eb175245013136c0e3bd13ffe0defa89fe7c2b71bcc29a",
+      "raw_path": "evidence/anthropic-batch-2026-08-23/source.body",
+      "normalized_path": "evidence/anthropic-batch-2026-08-23/normalized.txt",
+      "headers_path": "evidence/anthropic-batch-2026-08-23/headers.txt",
+      "required_terms_present": true,
+      "missing_required_terms": []
+    }
+  ],
+  "predecessor": {
+    "release_id": "kapi-price-index-2026-08-23T042959Z",
+    "sha256": "4d7d5e5a8a7cea0014ec6d0a2e481fecbafc9da2575e4b47deb35b94311e52d5"
+  }
+}
