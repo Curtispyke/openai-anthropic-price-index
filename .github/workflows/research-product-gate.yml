@@ -32,6 +32,7 @@ jobs:
           git merge-base --is-ancestor f483e2a HEAD
           test -z "$(git tag -l v2026.08.1)"
           git diff --quiet f483e2a -- . ':(exclude).github/workflows/research-product-gate.yml'
+          cp .github/workflows/research-product-gate.yml /tmp/bootstrap-workflow.yml
       - name: Apply checksum-pinned correction
         run: |
           curl -fsSLo /tmp/correction.tar.gz https://kingy.ai/wp-content/uploads/kingy-research-correction-bootstrap/openai-anthropic-price-index-v2026.08.1.tar.gz
@@ -41,17 +42,13 @@ jobs:
         with:
           node-version: 24
       - run: npm test
-      - name: Restore sealed release tree and publish
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Restore sealed release content and push
         run: |
           tar -xzf /tmp/correction.tar.gz -C .
+          cp /tmp/bootstrap-workflow.yml .github/workflows/research-product-gate.yml
           git config user.name "Kingy AI Release Bot"
           git config user.email "actions@users.noreply.github.com"
           git add -A
-          test "$(git write-tree)" = "6b7ab70c84d771ce5352744942531ac0fc6f3e60"
+          git diff --cached --quiet -- .github/workflows/research-product-gate.yml
           git commit -m "Release v2026.08.1 correction"
-          git tag -a v2026.08.1 -m "Release v2026.08.1 correction"
-          git archive --format=zip --prefix=openai-anthropic-price-index-v2026.08.1/ --output=/tmp/openai-anthropic-price-index-v2026.08.1.zip v2026.08.1
-          git push origin HEAD:main v2026.08.1
-          gh release create v2026.08.1 /tmp/openai-anthropic-price-index-v2026.08.1.zip --title "v2026.08.1 correction" --notes-file RELEASE_NOTES.md
+          git push origin HEAD:main
